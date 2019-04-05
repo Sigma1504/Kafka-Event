@@ -1,0 +1,27 @@
+server:
+  port: 9791
+
+management:
+  port: 9592
+  security.enabled: "false"
+  endpoint.metrics.enabled: "true"
+  endpoints.web.exposure.include: "*"
+  endpoint.prometheus.enabled: "true"
+  metrics.export.prometheus.enabled: "true"
+
+
+spring:
+  application:
+    name: admin-event-driven
+  jmx:
+    default-domain: admin-event-driven
+
+kafka:
+  bootStrapServers: "localhost:9092"
+  groupId: "adminEventDriven"
+  timeZone: "Europe/Brussels"
+  transaction: "false"
+  applicationName: "admin-event-driven"
+
+logging.level.com.accor: DEBUG
+streamconfig.instanceName: "admin-event-stream"
