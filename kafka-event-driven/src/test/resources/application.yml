@@ -1,0 +1,2 @@
+logging.level.com.accor: DEBUG
+streamconfig.instanceName: "admin-event-stream"
